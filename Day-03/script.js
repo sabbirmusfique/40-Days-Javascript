@@ -19,13 +19,14 @@ let CTC = totalSalary + 0.2*totalSalary;
 console.log("CTC ", CTC, " rupees")
 
 // Write a program for the Traffic Light Simulation.
-let color = "Red";
-if(color === "Green") console.log("GO")
-else console.log("STOP")
+let color = "red";
+if(color === "green") console.log("GO")
+else if(color === "red") console.log("STOP")
+else console.log("Wrong color code")
 
 // Create an Electricity Bill Calculator
 let units = 25;
-let monthlyCost = units * 150;
+let monthlyCost = units * 150 * 30;
 let yearlyCost = monthlyCost * 12;
 let discountedCost = 0.8 * yearlyCost;
 
@@ -35,8 +36,8 @@ console.log("Yearly Cost with 20% discount ", discountedCost)
 
 // Leap Year Checker
 let year = 2002;
-let result = year%400 == 0 ? true : year%4 == 0 && year%100 != 0 ? true : false;
-console.log(year, result == true ? "Leap Year" : "Not a Leap Year")
+let result = year%400 == 0 || (year%4 == 0 && year%100 != 0);
+console.log(year, result ? "Leap Year" : "Not a Leap Year")
 
 // Max of Three Numbers
 let p=244, q=134, r=54;
